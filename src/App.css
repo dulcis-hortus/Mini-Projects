@@ -1,38 +1,97 @@
-.App {
+
+:root {
+  --main-color-skyblue: rgba(149, 243, 255);
+  --main-color-white: #ffffff;
+}
+
+
+button {
+  width: 45px;
+  cursor: pointer;
+  border: 1px solid black;
+  /* border-radius: 10px; */
+  background: var(--main-color-white);
+  /* color: var(--main-color-skyblue); */
+  font-weight: 700;
+}
+
+button:hover {
+  background: var(--main-color-skyblue);
+  color: var(--main-color-white);
+}
+
+.container {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#title {
+  margin-bottom: 60px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#title::after {
+  content:"";
+  display: block;
+  width: 80px;
+  height: 1px;
+  bottom: 0;
+  /* margin-top: 15px; */
+  margin: 25px auto 0;
+  border-bottom: 2px solid rgba(149, 243, 255);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.all { 
+  width: 400px;
+  margin: 50px auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.screen {
+  background: rgba(149, 243, 255, 0.726);
+  border: 1px solid gray;
+  width: 380px;
+  height: 380px;
+  overflow: auto;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.write {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 50px;
+}
+
+.write span:nth-child(1) {
+  display: flex;
+  justify-content: space-between;
+}
+
+.write span:nth-child(1) span span {
+  font-weight: 700;
+  margin-right: 10px;
+}
+
+.write span:nth-child(1) input {
+  margin-right: 65px;
+}
+
+.write textarea {
+  width: 380px;
+  height: 380px;
+  resize: none;
+}
+
+.write span:nth-child(3) {
+  display: flex;
+  justify-content: space-between;
+}
+
+.all .search .day-search {
+  display: flex;
+  justify-content: space-between;
+}
+
+.all .search .day-search span {
+  font-weight: 700;
+  margin-right: 6px;
 }
